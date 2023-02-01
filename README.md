@@ -5,7 +5,7 @@
 
 Кроме разработки перцептрона и программмного интерфейса, было проведено исследование для сравнения матричной и графовой реализаций, прилагаемое в файле  [research.md](./research.md).
 
-## Пример работы
+## Example
 ![](https://github.com/roshik14/Multilayer-Perceptron/blob/main/preview.gif)
 
 ## Note

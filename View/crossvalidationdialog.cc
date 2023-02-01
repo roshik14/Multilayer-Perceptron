@@ -21,10 +21,9 @@ void CrossValidationDialog::ChooseFileBtnClicked() {
   auto file_viewer = std::make_unique<FileViewer>();
   auto readed = file_viewer->ReadDataset();
   if (readed) {
-    file_name_ = file_viewer->FileName();
-    auto index = file_name_.lastIndexOf('/') + 1;
-    ui_->file_name_label->setText(file_name_.sliced(index));
-    ui_->apply_button->setEnabled(true);
+      file_name_ = file_viewer->FileName();
+      ui_->file_name_label->setText(file_name_.section('/', -1));
+      ui_->apply_button->setEnabled(true);
   }
 }
 

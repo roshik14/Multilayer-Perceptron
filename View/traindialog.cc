@@ -44,8 +44,7 @@ void TrainDialog::ChooseFileSlot() {
   auto opened = reader->ReadDataset();
   if (opened) {
     file_name_ = reader->FileName();
-    auto index = file_name_.lastIndexOf('/') + 1;
-    ui_->file_name_label->setText(file_name_.sliced(index));
+    ui_->file_name_label->setText(file_name_.section('/', -1));
     GetApplyButton()->setEnabled(true);
   }
 }

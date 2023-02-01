@@ -26,8 +26,7 @@ void TestDialog::ChooseFileSlot() {
   auto readed = file_viewer->ReadDataset();
   if (readed) {
     data_.file_name = file_viewer->FileName();
-    auto index = data_.file_name.lastIndexOf('/') + 1;
-    ui_->file_name_label->setText(data_.file_name.sliced(index));
+    ui_->file_name_label->setText(data_.file_name.section('/', -1));
     ui_->button_box->button(QDialogButtonBox::Ok)->setEnabled(true);
   }
 }

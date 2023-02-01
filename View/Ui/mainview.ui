@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainView</string>
+   <string>MLP</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="s21::Drawer" name="drawer">
